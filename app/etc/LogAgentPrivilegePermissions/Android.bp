@@ -1,0 +1,6 @@
+prebuilt_etc {
+    name: "privapp_whitelist_la.shiro.logagent",
+    sub_dir: "permissions",
+    src: "privapp_whitelist_la.shiro.logagent.xml",
+    filename_from_src: true,
+}
