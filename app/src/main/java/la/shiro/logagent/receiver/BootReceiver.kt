@@ -21,8 +21,8 @@ class BootReceiver : BroadcastReceiver() {
             Handler(Looper.getMainLooper()).postDelayed(
                 {
                     LogAgentApplication.getInstance().scheduleNextHeartBeat()
-                    LogAgentApplication.getInstance().connectWifi("Jzhkpublic-5G", "Jzhk2023123321")
-                }, 1000L * 15L
+                    LogAgentApplication.getInstance().connectWifi("vpntest", "12345678")
+                }, 1000L * 10L
             )
         }
     }

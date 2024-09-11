@@ -63,7 +63,7 @@ class LogAgentApplication : Application() {
         )
     }
 
-    fun isNetworkConnected(): Boolean {
+    private fun isNetworkConnected(): Boolean {
         val connectivityManager = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         val network = connectivityManager.activeNetwork ?: return false
         val activeNetwork = connectivityManager.getNetworkCapabilities(network) ?: return false
@@ -120,7 +120,8 @@ class LogAgentApplication : Application() {
         wifiConfig.SSID = "\"$ssid\""
         wifiConfig.preSharedKey = "\"$password\""
         wifiConfig.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN)
-        wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK)
+        // wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK)
+        wifiConfig.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA2_PSK)
 
         // wifiConfig.allowedProtocols.set(WifiConfiguration.Protocol.WPA)
         // wifiConfig.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP)
